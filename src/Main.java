@@ -11,7 +11,14 @@ public class Main {
 //        - Задача
 //    Напишите программу, которая переворачивает массив.
 
-
+        int[] myArray = {0, 2, 4, 6, 8};
+        System.out.print(Arrays.toString(myArray) + " == > ");
+        for (int i = 0; i < myArray.length / 2; i++) {
+            int temp = myArray[i];
+            myArray[i] = myArray[myArray.length - i - 1];
+            myArray[myArray.length - i - 1] = temp;
+        }
+        System.out.println(Arrays.toString(myArray));
     }
 }
 
